@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageButton;
+
 
 public class ScrollingActivity extends AppCompatActivity {
 
@@ -26,6 +28,8 @@ public class ScrollingActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        ImageButton Knopf = (ImageButton) findViewById(R.id.immer);
     }
 
     @Override
