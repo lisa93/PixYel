@@ -33,10 +33,11 @@
             <ImageButton
                 android:layout_width="93dp"
                 android:layout_height="80dp"
-                app:srcCompat="?android:attr/floatingToolbarOpenDrawable"
+                app:srcCompat="@mipmap/ic_launcher"
                 android:id="@+id/immer"
-                android:backgroundTint="@color/colorPrimary"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:tint="@android:color/background_dark"
+                android:background="@color/colorPrimary" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
