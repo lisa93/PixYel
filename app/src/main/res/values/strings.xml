@@ -91,4 +91,7 @@
     </string>
     <string name="action_settings">Settings</string>
     <string name="textview">TextView</string>
+    <string name="latitude">Latitude:</string>
+    <string name="longitude">Longitude:</string>
+    <string name="locationl">locationl</string>
 </resources>

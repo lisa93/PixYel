@@ -37,7 +37,25 @@
                 android:id="@+id/immer"
                 android:scaleType="fitCenter"
                 android:tint="@android:color/background_dark"
-                android:background="@color/colorPrimary" />
+                android:background="@color/colorPrimary"
+                android:contentDescription="@android:string/ok"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:text="@string/latitude"
+                android:layout_width="219dp"
+                android:layout_height="41dp"
+                android:id="@+id/lati"
+                android:layout_marginTop="60dp"
+                android:layout_marginStart="100dp" />
+
+            <TextView
+                android:text="@string/longitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/longi"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="100dp" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
