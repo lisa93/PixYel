@@ -57,8 +57,7 @@ public class ScrollingActivity extends AppCompatActivity implements LocationList
 
         // Get the location manager
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        // Define the criteria how to select the locatioin provider -> use
-        // default
+        // Define the criteria how to select the location provider -> use default
         Criteria criteria = new Criteria();
         provider = locationManager.getBestProvider(criteria, false);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -152,10 +151,10 @@ public class ScrollingActivity extends AppCompatActivity implements LocationList
 
     @Override
     public void onLocationChanged(Location location) {
-        int lat = (int) (location.getLatitude());
-        int lng = (int) (location.getLongitude());
-        lati.setText(String.valueOf(lat));
-        longi.setText(String.valueOf(lng));
+        double lat = (double) (location.getLatitude());
+        double lng = (double) (location.getLongitude());
+        lati.setText("Latitude:" + String.valueOf(lat));
+        longi.setText("Longitude:" + String.valueOf(lng));
     }
 
     @Override
@@ -175,10 +174,7 @@ public class ScrollingActivity extends AppCompatActivity implements LocationList
                 Toast.LENGTH_SHORT).show();
     }
 
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
+
     public Action getIndexApiAction() {
         Thing object = new Thing.Builder()
                 .setName("Scrolling Page") // TODO: Define a title for the content shown.
@@ -195,8 +191,7 @@ public class ScrollingActivity extends AppCompatActivity implements LocationList
     public void onStart() {
         super.onStart();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
+
         client.connect();
         AppIndex.AppIndexApi.start(client, getIndexApiAction());
     }
@@ -205,8 +200,7 @@ public class ScrollingActivity extends AppCompatActivity implements LocationList
     public void onStop() {
         super.onStop();
 
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
+
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
     }
